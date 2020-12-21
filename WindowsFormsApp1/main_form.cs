@@ -160,7 +160,7 @@ namespace WindowsFormsApp1
             }
 
             if(model_name.Length > 1)
-                StatusLabel.Text = "创建模型成功！";
+                StatusLabel.Text = "创建模型成功！!";
             else
             {
                 StatusLabel.Text = "创建了一个无名模型！";
