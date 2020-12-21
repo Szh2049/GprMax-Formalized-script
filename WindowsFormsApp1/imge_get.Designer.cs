@@ -37,8 +37,8 @@ namespace WindowsFormsApp1
             this.A_scans = new System.Windows.Forms.Button();
             this.combined = new System.Windows.Forms.Button();
             this.combined2 = new System.Windows.Forms.Button();
+            this.status_bar1 = new System.Windows.Forms.Label();
             this.status_bar = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // A_scan1
@@ -92,7 +92,7 @@ namespace WindowsFormsApp1
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(860, 253);
             this.richTextBox1.TabIndex = 39;
-            this.richTextBox1.Text = "1、A扫描模拟生成.out文件\n2、B扫描模拟生成n个.out文件\n3、进行B扫描后需要合并，模式1是不删原有文件，模式2删除原有文件。";
+            this.richTextBox1.Text = "1、A扫描模拟生成.out文件\n2、B扫描模拟生成n个.out文件\n3、进行B扫描后需要合并再进行绘图，模式1是不删原有文件，模式2删除原有文件。";
             // 
             // A_scans
             // 
@@ -127,24 +127,24 @@ namespace WindowsFormsApp1
             this.combined2.UseVisualStyleBackColor = true;
             this.combined2.Click += new System.EventHandler(this.combined2_Click);
             // 
+            // status_bar1
+            // 
+            this.status_bar1.AutoSize = true;
+            this.status_bar1.Font = new System.Drawing.Font("SimSun-ExtB", 14.8F);
+            this.status_bar1.Location = new System.Drawing.Point(471, 61);
+            this.status_bar1.Name = "status_bar1";
+            this.status_bar1.Size = new System.Drawing.Size(116, 25);
+            this.status_bar1.TabIndex = 43;
+            this.status_bar1.Text = "状态框：";
+            // 
             // status_bar
             // 
-            this.status_bar.Location = new System.Drawing.Point(492, 46);
+            this.status_bar.Location = new System.Drawing.Point(578, 54);
             this.status_bar.Multiline = true;
             this.status_bar.Name = "status_bar";
-            this.status_bar.Size = new System.Drawing.Size(287, 42);
+            this.status_bar.Size = new System.Drawing.Size(213, 42);
             this.status_bar.TabIndex = 44;
-            this.status_bar.Text = "显示操作状态";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("SimSun-ExtB", 10.8F);
-            this.label13.Location = new System.Drawing.Point(397, 58);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(89, 19);
-            this.label13.TabIndex = 43;
-            this.label13.Text = "状态框：";
+            this.status_bar.Text = "显示操作状态信息。";
             // 
             // imge_get
             // 
@@ -154,7 +154,7 @@ namespace WindowsFormsApp1
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(1242, 577);
             this.Controls.Add(this.status_bar);
-            this.Controls.Add(this.label13);
+            this.Controls.Add(this.status_bar1);
             this.Controls.Add(this.combined2);
             this.Controls.Add(this.combined);
             this.Controls.Add(this.A_scans);
@@ -176,11 +176,11 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Button B_scan1;
         private System.Windows.Forms.Button A_scan2;
         private System.Windows.Forms.Button B_scan2;
-        private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.Button A_scans;
         private System.Windows.Forms.Button combined;
         private System.Windows.Forms.Button combined2;
-        private System.Windows.Forms.TextBox status_bar;
-        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label status_bar1;
+        public System.Windows.Forms.RichTextBox richTextBox1;
+        public System.Windows.Forms.TextBox status_bar;
     }
 }

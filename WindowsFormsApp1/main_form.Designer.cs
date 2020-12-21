@@ -58,12 +58,12 @@ namespace WindowsFormsApp1
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
+            this.StatusLabel1 = new System.Windows.Forms.Label();
             this.button7 = new System.Windows.Forms.Button();
-            this.textBox10 = new System.Windows.Forms.TextBox();
             this.button8 = new System.Windows.Forms.Button();
             this.label14 = new System.Windows.Forms.Label();
             this.button9 = new System.Windows.Forms.Button();
+            this.StatusLabel = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // button1
@@ -324,15 +324,15 @@ namespace WindowsFormsApp1
             this.label12.TabIndex = 28;
             this.label12.Text = "其他参数设置：";
             // 
-            // label13
+            // StatusLabel1
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("SimSun-ExtB", 10.8F);
-            this.label13.Location = new System.Drawing.Point(314, 506);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(89, 19);
-            this.label13.TabIndex = 29;
-            this.label13.Text = "状态框：";
+            this.StatusLabel1.AutoSize = true;
+            this.StatusLabel1.Font = new System.Drawing.Font("SimSun-ExtB", 12.8F);
+            this.StatusLabel1.Location = new System.Drawing.Point(325, 476);
+            this.StatusLabel1.Name = "StatusLabel1";
+            this.StatusLabel1.Size = new System.Drawing.Size(98, 22);
+            this.StatusLabel1.TabIndex = 29;
+            this.StatusLabel1.Text = "状态框：";
             // 
             // button7
             // 
@@ -345,20 +345,12 @@ namespace WindowsFormsApp1
             this.button7.UseVisualStyleBackColor = true;
             this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
-            // textBox10
-            // 
-            this.textBox10.Location = new System.Drawing.Point(409, 505);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(192, 25);
-            this.textBox10.TabIndex = 31;
-            this.textBox10.Text = "显示是否成功保存";
-            // 
             // button8
             // 
             this.button8.Font = new System.Drawing.Font("SimSun-ExtB", 10.8F, System.Drawing.FontStyle.Bold);
-            this.button8.Location = new System.Drawing.Point(1018, 481);
+            this.button8.Location = new System.Drawing.Point(920, 468);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(120, 38);
+            this.button8.Size = new System.Drawing.Size(134, 51);
             this.button8.TabIndex = 32;
             this.button8.Text = "退出";
             this.button8.UseVisualStyleBackColor = true;
@@ -377,7 +369,7 @@ namespace WindowsFormsApp1
             // button9
             // 
             this.button9.Font = new System.Drawing.Font("SimSun-ExtB", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button9.Location = new System.Drawing.Point(815, 475);
+            this.button9.Location = new System.Drawing.Point(739, 468);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(120, 51);
             this.button9.TabIndex = 34;
@@ -385,17 +377,26 @@ namespace WindowsFormsApp1
             this.button9.UseVisualStyleBackColor = true;
             this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
-            // Form1
+            // StatusLabel
+            // 
+            this.StatusLabel.Location = new System.Drawing.Point(429, 466);
+            this.StatusLabel.Multiline = true;
+            this.StatusLabel.Name = "StatusLabel";
+            this.StatusLabel.Size = new System.Drawing.Size(203, 41);
+            this.StatusLabel.TabIndex = 36;
+            this.StatusLabel.Text = "主要显示一些导入的状态。";
+            // 
+            // main_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1159, 572);
+            this.Controls.Add(this.StatusLabel);
             this.Controls.Add(this.button9);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.button8);
-            this.Controls.Add(this.textBox10);
             this.Controls.Add(this.button7);
-            this.Controls.Add(this.label13);
+            this.Controls.Add(this.StatusLabel1);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
@@ -425,7 +426,7 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.domain_x);
             this.Controls.Add(this.button1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Form1";
+            this.Name = "main_form";
             this.Text = "GprMax辅助脚本";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
@@ -463,12 +464,12 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.TextBox textBox10;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Button button9;
+        public System.Windows.Forms.Label StatusLabel1;
+        private System.Windows.Forms.TextBox StatusLabel;
     }
 }
 

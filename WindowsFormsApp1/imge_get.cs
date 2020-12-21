@@ -38,7 +38,7 @@ namespace WindowsFormsApp1
             path += ".out";
             string strInput2 = "python -m tools.plot_Ascan " + path;
 
-
+            Application.DoEvents();
             status_bar.Text = "正在生成！";
             //向cmd窗口发送输入信息
             p.StandardInput.WriteLine(strInput1);
@@ -53,6 +53,7 @@ namespace WindowsFormsApp1
             p.WaitForExit();    //等待程序执行完退出进程
             p.Close();
 
+            Application.DoEvents();
             status_bar.Text = "图像生成成功！";
 
             f.richTextBox1.Text = strOuput;
@@ -79,10 +80,10 @@ namespace WindowsFormsApp1
 
             // A扫描
             string strInput1 = "activate  gprmax";
-            path += ".in";
-            string strInput2 = "python -m gprMax " + path;
+            string path1 = path + ".in";
+            string strInput2 = "python -m gprMax " + path1;
 
-
+            Application.DoEvents();  //多次导入
             status_bar.Text = "正在导入！";
             //向cmd窗口发送输入信息
             p.StandardInput.WriteLine(strInput1);
@@ -97,6 +98,7 @@ namespace WindowsFormsApp1
             p.WaitForExit();    //等待程序执行完退出进程
             p.Close();
 
+            Application.DoEvents();
             status_bar.Text = "导入成功！";
 
             f.richTextBox1.Text = strOuput;
@@ -163,8 +165,8 @@ namespace WindowsFormsApp1
             string strInput1 = "activate  gprmax";
             string strInput2 = "python -m gprMax " + subPath + " -n 60";
 
-
-            status_bar.Text = "正在导入！";
+            Application.DoEvents();
+            status_bar.Text = "正在生成文件，大概需要2分钟！";
             //向cmd窗口发送输入信息
             p.StandardInput.WriteLine(strInput1);
             p.StandardInput.WriteLine(strInput2 + "&exit");
@@ -178,6 +180,7 @@ namespace WindowsFormsApp1
             p.WaitForExit();    //等待程序执行完退出进程
             p.Close();
 
+            Application.DoEvents();
             status_bar.Text = "导入成功！";
 
             f.richTextBox1.Text = strOuput;
@@ -208,7 +211,7 @@ namespace WindowsFormsApp1
             string strInput1 = "activate  gprmax";
             string strInput2 = "python -m tools.plot_Bscan " + subPath + " Ez";
 
-
+            Application.DoEvents();
             status_bar.Text = "正在导入！";
             //向cmd窗口发送输入信息
             p.StandardInput.WriteLine(strInput1);
@@ -223,7 +226,8 @@ namespace WindowsFormsApp1
             p.WaitForExit();    //等待程序执行完退出进程
             p.Close();
 
-            status_bar.Text = "导入成功！";
+            Application.DoEvents();
+            status_bar.Text = "图像显示成功！";
 
             f.richTextBox1.Text = strOuput;
             f.ShowDialog();
@@ -253,8 +257,9 @@ namespace WindowsFormsApp1
             string strInput1 = "activate  gprmax";
             string strInput2 = "python -m tools.outputfiles_merge " + subPath;
 
-
+            Application.DoEvents();
             status_bar.Text = "正在合成！";
+
             //向cmd窗口发送输入信息
             p.StandardInput.WriteLine(strInput1);
             p.StandardInput.WriteLine(strInput2 + "&exit");
@@ -268,6 +273,7 @@ namespace WindowsFormsApp1
             p.WaitForExit();    //等待程序执行完退出进程
             p.Close();
 
+            Application.DoEvents();
             status_bar.Text = "合成成功！";
 
             f.richTextBox1.Text = strOuput;
@@ -298,8 +304,9 @@ namespace WindowsFormsApp1
             string strInput1 = "activate  gprmax";
             string strInput2 = "python -m tools.outputfiles_merge " + subPath + " --remove-files";
 
-
+            Application.DoEvents();
             status_bar.Text = "正在合成！";
+
             //向cmd窗口发送输入信息
             p.StandardInput.WriteLine(strInput1);
             p.StandardInput.WriteLine(strInput2 + "&exit");
@@ -313,6 +320,7 @@ namespace WindowsFormsApp1
             p.WaitForExit();    //等待程序执行完退出进程
             p.Close();
 
+            Application.DoEvents();
             status_bar.Text = "合成成功！";
 
             f.richTextBox1.Text = strOuput;

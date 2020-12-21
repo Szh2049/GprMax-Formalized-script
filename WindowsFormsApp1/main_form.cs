@@ -160,10 +160,10 @@ namespace WindowsFormsApp1
             }
 
             if(model_name.Length > 1)
-                textBox10.Text = "创建模型成功！";
+                StatusLabel.Text = "创建模型成功！";
             else
             {
-                textBox10.Text = "创建了一个无名模型！";
+                StatusLabel.Text = "创建了一个无名模型！";
             }
         }
 
@@ -177,10 +177,12 @@ namespace WindowsFormsApp1
             Console.WriteLine("请输入要执行的命令:");
             string strInput = Console.ReadLine();
             */
-            Thread.Sleep(500);//睡眠500毫秒，也就是0.5秒
-            textBox10.Text = "";
 
-            textBox10.Text = "正在初始化！";
+            Application.DoEvents();
+            StatusLabel.Text = "";
+            Thread.Sleep(5000);//睡眠500毫秒，也就是0.5秒
+
+            StatusLabel.Text = "正在初始化！";
             Process p = new Process();
             //设置要启动的应用程序
             p.StartInfo.FileName = "cmd.exe";
@@ -195,9 +197,9 @@ namespace WindowsFormsApp1
             //不显示程序窗口
             p.StartInfo.CreateNoWindow = true;
 
-
+            Application.DoEvents();
             Thread.Sleep(500);//睡眠500毫秒，也就是0.5秒
-            textBox10.Text = "";
+            StatusLabel.Text = "";
 
 
             //启动程序
@@ -210,10 +212,11 @@ namespace WindowsFormsApp1
             string path = System.IO.Path.Combine("{0}", "{1}", catalog, model_name + ".in");
             string strInput2 = "python -m gprMax " + path + " --geometry-only";
 
-
-            textBox10.Text = "初始化成功，正在导入！";
+            Application.DoEvents();
+            StatusLabel.Text = "初始化成功，正在导入！";
+            Application.DoEvents();
             Thread.Sleep(500);//睡眠500毫秒，也就是0.5秒
-            textBox10.Text = "";
+            StatusLabel.Text = "";
 
             //向cmd窗口发送输入信息
             p.StandardInput.WriteLine(strInput1);
@@ -229,7 +232,8 @@ namespace WindowsFormsApp1
             p.WaitForExit();
             p.Close();
 
-            textBox10.Text = "导入成功！！";
+            Application.DoEvents();
+            StatusLabel.Text = "导入成功！！";
             
             f.richTextBox1.Text = strOuput;
             f.ShowDialog();
@@ -291,5 +295,6 @@ namespace WindowsFormsApp1
             f.ShowDialog();
 
         }
+
     }
 }
