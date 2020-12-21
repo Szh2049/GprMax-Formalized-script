@@ -1,7 +1,7 @@
 ﻿
 namespace WindowsFormsApp1
 {
-    partial class Form1
+    partial class main_form
     {
         /// <summary>
         /// 必需的设计器变量。
@@ -29,7 +29,7 @@ namespace WindowsFormsApp1
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(main_form));
             this.button1 = new System.Windows.Forms.Button();
             this.domain_x = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();

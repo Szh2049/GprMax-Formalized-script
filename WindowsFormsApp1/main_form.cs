@@ -6,9 +6,9 @@ using System.Threading;
 
 namespace WindowsFormsApp1
 {
-    public partial class Form1 : Form
+    public partial class main_form : Form
     {
-        public Form1()
+        public main_form()
         {
             InitializeComponent();
         }
@@ -21,7 +21,7 @@ namespace WindowsFormsApp1
         private void button1_Click(object sender, EventArgs e)
         {
             // 使用说明，弹出新窗口
-            Form2 f = new Form2();
+            instructions f = new instructions();
             f.ShowDialog();
         }
 
