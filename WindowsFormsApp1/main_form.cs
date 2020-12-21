@@ -280,7 +280,7 @@ namespace WindowsFormsApp1
             //传递path地址
             string model_name = this.text_name.Text;
             string catalog = @comboBox1.SelectedItem.ToString();
-            string path = System.IO.Path.Combine("{0}", "{1}", catalog, model_name + ".in");
+            string path = System.IO.Path.Combine("{0}", "{1}", catalog, model_name);
             
 
             // 材料的弹出新窗口
