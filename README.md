@@ -1,3 +1,7 @@
+GprMax3.0 docking script. hands-on by C#, not too perfect, too young too simple.Irregular maintenance.
+The main function is to help the colleagues who learn GprMax3.0 to write. In file, integrated python and GprMax3.0 commands.
+It is easy to learn and apply GprMax3.0.
+
 GprMax3.0对接脚本。
 c# 练手之作，不太完善，too young too simple.
 不定期维护。
