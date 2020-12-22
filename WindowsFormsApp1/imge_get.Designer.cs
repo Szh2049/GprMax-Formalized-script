@@ -29,6 +29,7 @@ namespace WindowsFormsApp1
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(imge_get));
             this.A_scan1 = new System.Windows.Forms.Button();
             this.B_scan1 = new System.Windows.Forms.Button();
             this.A_scan2 = new System.Windows.Forms.Button();
@@ -39,6 +40,11 @@ namespace WindowsFormsApp1
             this.combined2 = new System.Windows.Forms.Button();
             this.status_bar1 = new System.Windows.Forms.Label();
             this.status_bar = new System.Windows.Forms.TextBox();
+            this.n = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // A_scan1
@@ -92,7 +98,7 @@ namespace WindowsFormsApp1
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(860, 253);
             this.richTextBox1.TabIndex = 39;
-            this.richTextBox1.Text = "1、A扫描模拟生成.out文件\n2、B扫描模拟生成n个.out文件\n3、进行B扫描后需要合并再进行绘图，模式1是不删原有文件，模式2删除原有文件。";
+            this.richTextBox1.Text = resources.GetString("richTextBox1.Text");
             // 
             // A_scans
             // 
@@ -129,6 +135,7 @@ namespace WindowsFormsApp1
             // 
             // status_bar1
             // 
+            this.status_bar1.AllowDrop = true;
             this.status_bar1.AutoSize = true;
             this.status_bar1.Font = new System.Drawing.Font("SimSun-ExtB", 14.8F);
             this.status_bar1.Location = new System.Drawing.Point(471, 61);
@@ -146,6 +153,49 @@ namespace WindowsFormsApp1
             this.status_bar.TabIndex = 44;
             this.status_bar.Text = "显示操作状态信息。";
             // 
+            // n
+            // 
+            this.n.Location = new System.Drawing.Point(1088, 66);
+            this.n.Name = "n";
+            this.n.Size = new System.Drawing.Size(100, 25);
+            this.n.TabIndex = 45;
+            this.n.Text = "198";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(1098, 35);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(75, 15);
+            this.label1.TabIndex = 46;
+            this.label1.Text = "B扫描次数";
+            // 
+            // progressBar1
+            // 
+            this.progressBar1.Location = new System.Drawing.Point(41, 493);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(326, 41);
+            this.progressBar1.TabIndex = 47;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("宋体", 12F);
+            this.label2.Location = new System.Drawing.Point(139, 444);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(99, 20);
+            this.label2.TabIndex = 48;
+            this.label2.Text = "B扫描进度";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(263, 448);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(37, 15);
+            this.label3.TabIndex = 49;
+            this.label3.Text = "进度";
+            // 
             // imge_get
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -153,6 +203,11 @@ namespace WindowsFormsApp1
             this.BackColor = System.Drawing.Color.CornflowerBlue;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(1242, 577);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.progressBar1);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.n);
             this.Controls.Add(this.status_bar);
             this.Controls.Add(this.status_bar1);
             this.Controls.Add(this.combined2);
@@ -182,5 +237,10 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Label status_bar1;
         public System.Windows.Forms.RichTextBox richTextBox1;
         public System.Windows.Forms.TextBox status_bar;
+        private System.Windows.Forms.TextBox n;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ProgressBar progressBar1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }

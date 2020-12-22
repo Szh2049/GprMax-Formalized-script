@@ -2,6 +2,7 @@
 using System.Diagnostics;
 using System.Windows.Forms;
 using System.IO;
+using System.Threading;
 
 namespace WindowsFormsApp1
 {
@@ -10,6 +11,28 @@ namespace WindowsFormsApp1
         public imge_get()
         {
             InitializeComponent();
+            progressBar1.Value = 0;//设置当前值
+
+        /*
+            if ((int)(Convert.ToDouble(num) * 0.01) >= 1)
+                progressBar1.Step = (int)(Convert.ToDouble(num) * 0.01);//设置没次增长多少
+            else
+                progressBar1.Step = 1;
+            for (int i = 0; i < (Convert.ToInt32(num) / progressBar1.Step); i++)//循环
+            {
+                System.Threading.Thread.Sleep(3500);//暂停3.5秒
+                progressBar1.Value += progressBar1.Step; //让进度条增加一次
+            }
+        */
+        }
+        public void SetPos(int value)//设置进度条当前进度值
+        {
+            if (value < progressBar1.Maximum)//如果值有效
+            {
+                progressBar1.Value = value;  //设置进度值
+                label3.Text = (value * 100 / progressBar1.Maximum).ToString() + "%";//显示百分比
+            }
+            Application.DoEvents();//重点，必须加上，否则父子窗体都假死
         }
 
         public string path = null;
@@ -140,8 +163,10 @@ namespace WindowsFormsApp1
             }
         }
 
+        
         private void B_scan1_Click(object sender, EventArgs e)
         {
+            
             // 弹出新窗口
             Command_window_display f = new Command_window_display();
 
@@ -160,13 +185,30 @@ namespace WindowsFormsApp1
             //如果目标路径不存在,则创建目标路径           
             string subPath = System.IO.Path.Combine("{0}", "{1}", path, name + ".in");
             File_Copy1(subPath);
-
+            
+            string num = n.Text;
+            
             // B扫描
             string strInput1 = "activate  gprmax";
-            string strInput2 = "python -m gprMax " + subPath + " -n 60";
+            string strInput2 = "python -m gprMax " + subPath + " -n " + num;
+           
 
+            double time = Convert.ToInt32(num) * 4 / 60;
+            
             Application.DoEvents();
-            status_bar.Text = "正在生成文件，大概需要2分钟！";
+            status_bar.Text = "正在生成文件，大概需要" + ((int)(time)).ToString() +"分 " + Convert.ToInt32(num) * 4 % 60 + "秒！";
+
+            int n1;
+            Int32.TryParse(num, out n1);
+            progressBar1.Maximum = n1; //设置最大长度值
+
+            for (int i = 0; i < Convert.ToInt32(num) + 1; i++)
+            {
+                this.SetPos(i);//设置进度条位置
+                Thread.Sleep(3500);//睡眠时间为3.5秒
+            }
+
+            
             //向cmd窗口发送输入信息
             p.StandardInput.WriteLine(strInput1);
             p.StandardInput.WriteLine(strInput2 + "&exit");
@@ -184,7 +226,8 @@ namespace WindowsFormsApp1
             status_bar.Text = "导入成功！";
 
             f.richTextBox1.Text = strOuput;
-            f.ShowDialog();
+           
+            f.ShowDialog(); 
         }
 
         private void B_scan2_Click(object sender, EventArgs e)

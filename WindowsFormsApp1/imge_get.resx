@@ -117,4 +117,13 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="richTextBox1.Text" xml:space="preserve">
+    <value>1、A扫描即点测，模拟生成.out文件
+2、B扫描即多道测量，模拟生成n个.out文件，n根据你选取的步长确定，默认为198。
+3、进行B扫描后需要合并再进行绘图，模式1是不删原有文件，模式2删除原有文件。
+
+注意：A扫描和B扫描对应的代码不同，B扫描是多道扫描，需要设置步长，即扫描点的移动速度。
+同一个.in文件一次只能选择一种扫描形式，A或B，或者删除已生成的out文件。
+如果在代码中加入了#geometry_view:来显示图像，则会在进行B扫描时形成n个快照文件。</value>
+  </data>
 </root>

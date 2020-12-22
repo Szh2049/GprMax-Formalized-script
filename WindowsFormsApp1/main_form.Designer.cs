@@ -126,7 +126,7 @@ namespace WindowsFormsApp1
             this.domain_y.Location = new System.Drawing.Point(173, 186);
             this.domain_y.Name = "domain_y";
             this.domain_y.Size = new System.Drawing.Size(100, 25);
-            this.domain_y.TabIndex = 6;
+            this.domain_y.TabIndex = 3;
             // 
             // label4
             // 
@@ -143,7 +143,7 @@ namespace WindowsFormsApp1
             this.dy.Location = new System.Drawing.Point(453, 181);
             this.dy.Name = "dy";
             this.dy.Size = new System.Drawing.Size(100, 25);
-            this.dy.TabIndex = 12;
+            this.dy.TabIndex = 6;
             // 
             // label5
             // 
@@ -160,7 +160,7 @@ namespace WindowsFormsApp1
             this.dz.Location = new System.Drawing.Point(453, 230);
             this.dz.Name = "dz";
             this.dz.Size = new System.Drawing.Size(100, 25);
-            this.dz.TabIndex = 10;
+            this.dz.TabIndex = 7;
             // 
             // label6
             // 
@@ -177,7 +177,7 @@ namespace WindowsFormsApp1
             this.dx.Location = new System.Drawing.Point(453, 132);
             this.dx.Name = "dx";
             this.dx.Size = new System.Drawing.Size(100, 25);
-            this.dx.TabIndex = 8;
+            this.dx.TabIndex = 5;
             // 
             // label7
             // 
@@ -194,7 +194,7 @@ namespace WindowsFormsApp1
             this.title.Location = new System.Drawing.Point(209, 42);
             this.title.Name = "title";
             this.title.Size = new System.Drawing.Size(370, 25);
-            this.title.TabIndex = 14;
+            this.title.TabIndex = 1;
             // 
             // button2
             // 
@@ -275,14 +275,14 @@ namespace WindowsFormsApp1
             this.text_name.Location = new System.Drawing.Point(882, 239);
             this.text_name.Name = "text_name";
             this.text_name.Size = new System.Drawing.Size(121, 25);
-            this.text_name.TabIndex = 23;
+            this.text_name.TabIndex = 9;
             // 
             // time_window
             // 
             this.time_window.Location = new System.Drawing.Point(785, 138);
             this.time_window.Name = "time_window";
             this.time_window.Size = new System.Drawing.Size(269, 25);
-            this.time_window.TabIndex = 24;
+            this.time_window.TabIndex = 8;
             // 
             // button4
             // 

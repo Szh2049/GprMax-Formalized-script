@@ -34,7 +34,14 @@ namespace WindowsFormsApp1
         private void button1_Click(object sender, EventArgs e)
         {
             string content = "\n" + this.python_code.Text;
-            File.AppendAllText(path, content, Encoding.Default);
+            if(File.Exists(path))
+            { 
+                File.AppendAllText(path, content, Encoding.Default);
+            }
+            else
+            {
+                MessageBox.Show("不存在文件");
+            }
             this.Dispose();
         }
     }
