@@ -79,13 +79,7 @@ namespace WindowsFormsApp1
             dx_dy_dz[2] = this.dz.Text;
 
             string time_window = this.time_window.Text;
-            /*
-            // f1,f2,f3,f4
-            string f1 = this.f1.Text;
-            string f2 = this.f2.Text;
-            string f3 = this.f3.Text;
-            string f4 = this.f4.Text;
-            */
+        
             // 获得保存的地址
             string catalog = @comboBox1.SelectedItem.ToString();
 
@@ -165,6 +159,18 @@ namespace WindowsFormsApp1
 
         private void Button3_Click(object sender, EventArgs e)
         {
+            string model_name = this.text_name.Text;
+            string catalog = @comboBox1.SelectedItem.ToString();
+            string path = System.IO.Path.Combine("{0}", "{1}", catalog, model_name + ".in");
+
+            //打开一个文本，读取所有行，然后关闭该文档
+            string str1 = File.ReadAllText(path);
+            if (!str1.Contains("#geometry_view"))
+                {
+                    string geometry_view = String.Format("#geometry_view: 0 0 0 {0} {1} {2} {3} {4} {5} test_half_space n", domain_x.Text, domain_y.Text, domain_z.Text, dx.Text,dy.Text,dz.Text);      
+                    File.AppendAllText(path, geometry_view);
+                }         
+
             // 弹出新窗口
             Command_window_display f = new Command_window_display();
 
@@ -199,12 +205,8 @@ namespace WindowsFormsApp1
 
             //启动程序
             p.Start();
-
-            string model_name = this.text_name.Text;
-            string catalog = @comboBox1.SelectedItem.ToString();
-
+            
             string strInput1 = "activate  gprmax";
-            string path = System.IO.Path.Combine("{0}", "{1}", catalog, model_name + ".in");
             string strInput2 = "python -m gprMax " + path + " --geometry-only";
 
             Application.DoEvents();
