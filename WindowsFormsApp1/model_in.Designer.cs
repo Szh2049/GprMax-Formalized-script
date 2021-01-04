@@ -1,7 +1,7 @@
 ﻿
 namespace WindowsFormsApp1
 {
-    partial class model_in
+    partial class Model_in
     {
         /// <summary>
         /// Required designer variable.
@@ -278,7 +278,7 @@ namespace WindowsFormsApp1
             this.c7.Name = "c7";
             this.c7.Size = new System.Drawing.Size(100, 25);
             this.c7.TabIndex = 7;
-            this.c7.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
+            this.c7.TextChanged += new System.EventHandler(this.TextBox4_TextChanged);
             // 
             // label15
             // 
@@ -633,7 +633,7 @@ namespace WindowsFormsApp1
             this.c_button.TabIndex = 83;
             this.c_button.Text = "添加";
             this.c_button.UseVisualStyleBackColor = true;
-            this.c_button.Click += new System.EventHandler(this.c_button_Click);
+            this.c_button.Click += new System.EventHandler(this.C_button_Click);
             // 
             // t_button
             // 
@@ -644,7 +644,7 @@ namespace WindowsFormsApp1
             this.t_button.TabIndex = 84;
             this.t_button.Text = "添加";
             this.t_button.UseVisualStyleBackColor = true;
-            this.t_button.Click += new System.EventHandler(this.t_button_Click);
+            this.t_button.Click += new System.EventHandler(this.Button_Click);
             // 
             // s_button
             // 
@@ -666,7 +666,7 @@ namespace WindowsFormsApp1
             this.button1.TabIndex = 86;
             this.button1.Text = "退出";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
             // model_in
             // 

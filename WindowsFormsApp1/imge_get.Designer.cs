@@ -1,7 +1,7 @@
 ﻿
 namespace WindowsFormsApp1
 {
-    partial class imge_get
+    partial class Imge_get
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,8 @@ namespace WindowsFormsApp1
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(imge_get));
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Imge_get));
             this.A_scan1 = new System.Windows.Forms.Button();
             this.B_scan1 = new System.Windows.Forms.Button();
             this.A_scan2 = new System.Windows.Forms.Button();
@@ -45,6 +46,7 @@ namespace WindowsFormsApp1
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // A_scan1
@@ -102,6 +104,7 @@ namespace WindowsFormsApp1
             // 
             // A_scans
             // 
+            this.A_scans.Enabled = false;
             this.A_scans.Font = new System.Drawing.Font("SimSun-ExtB", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.A_scans.Location = new System.Drawing.Point(806, 430);
             this.A_scans.Name = "A_scans";
@@ -120,7 +123,7 @@ namespace WindowsFormsApp1
             this.combined.TabIndex = 41;
             this.combined.Text = "文件合并";
             this.combined.UseVisualStyleBackColor = true;
-            this.combined.Click += new System.EventHandler(this.combined_Click);
+            this.combined.Click += new System.EventHandler(this.Combined_Click);
             // 
             // combined2
             // 
@@ -131,7 +134,7 @@ namespace WindowsFormsApp1
             this.combined2.TabIndex = 42;
             this.combined2.Text = "文件合并2";
             this.combined2.UseVisualStyleBackColor = true;
-            this.combined2.Click += new System.EventHandler(this.combined2_Click);
+            this.combined2.Click += new System.EventHandler(this.Combined2_Click);
             // 
             // status_bar1
             // 
@@ -196,7 +199,12 @@ namespace WindowsFormsApp1
             this.label3.TabIndex = 49;
             this.label3.Text = "进度";
             // 
-            // imge_get
+            // timer1
+            // 
+            this.timer1.Interval = 300;
+            this.timer1.Tick += new System.EventHandler(this.Timer1_Tick);
+            // 
+            // Imge_get
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -218,7 +226,7 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.A_scan2);
             this.Controls.Add(this.B_scan1);
             this.Controls.Add(this.A_scan1);
-            this.Name = "imge_get";
+            this.Name = "Imge_get";
             this.Text = "imge_get";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -242,5 +250,6 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Timer timer1;
     }
 }

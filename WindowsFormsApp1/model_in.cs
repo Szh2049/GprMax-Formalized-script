@@ -11,17 +11,17 @@ using System.IO;
 
 namespace WindowsFormsApp1
 {
-    public partial class model_in : Form
+    public partial class Model_in : Form
     {
-        public model_in()
+        public Model_in()
         {
             InitializeComponent();
         }
-        private void textBox4_TextChanged(object sender, EventArgs e)
+        private void TextBox4_TextChanged(object sender, EventArgs e)
         {
 
         }
-        string[] fillit(string str,int num)
+        string[] Fillit(string str,int num)
         {
             
             string[] model = new string[num];
@@ -32,9 +32,9 @@ namespace WindowsFormsApp1
                 { 
                     string str1 = str + i.ToString();
                     //查找字串中指定字符或字串首次出现的位置,返首索引值;
-                    if (item is TextBox && item.Name.IndexOf(str1) == 0)
+                    if (item is TextBox box && item.Name.IndexOf(str1) == 0)
                     {
-                        model[i-1] = ((TextBox)item).Text;//获取文本框的值                       
+                        model[i-1] = box.Text;//获取文本框的值                       
                     }
                 }
             }
@@ -42,11 +42,11 @@ namespace WindowsFormsApp1
         }
 
         public string path = null;
-        private void c_button_Click(object sender, EventArgs e)
+        private void C_button_Click(object sender, EventArgs e)
         {
             //圆柱体
             string[] f = new string[7];
-            f = fillit("c", 7);
+            f = Fillit("c", 7);
 
             string c_str = this.c_str.Text;
             string cylinder = "\n" + "#cylinder: ";
@@ -72,7 +72,7 @@ namespace WindowsFormsApp1
             }
 
             //清空textbox
-            foreach (var item in this.Controls)
+            foreach (object item in this.Controls)
                 {
                     if (item is TextBox)
                     {
@@ -84,11 +84,11 @@ namespace WindowsFormsApp1
         
         }
 
-        private void t_button_Click(object sender, EventArgs e)
+        private void Button_Click(object sender, EventArgs e)
         {
             //三角形
             string[] f = new string[10];
-            f = fillit("t", 10);
+            f = Fillit("t", 10);
 
             string t_str = this.t_str.Text;
             string triangle = "\n" + "#triangle: ";
@@ -145,7 +145,7 @@ namespace WindowsFormsApp1
         {
             //球
             string[] f = new string[4];
-            f = fillit("t", 4);
+            f = Fillit("t", 4);
 
             string s_str = this.s_str.Text;
             string sphere = "\n" + "#sphere: ";
@@ -174,7 +174,7 @@ namespace WindowsFormsApp1
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Button1_Click(object sender, EventArgs e)
         {
             this.Close();
         }

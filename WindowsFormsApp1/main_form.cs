@@ -6,9 +6,9 @@ using System.Threading;
 
 namespace WindowsFormsApp1
 {
-    public partial class main_form : Form
+    public partial class Main_form : Form
     {
-        public main_form()
+        public Main_form()
         {
             InitializeComponent();
         }
@@ -18,7 +18,7 @@ namespace WindowsFormsApp1
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Button1_Click(object sender, EventArgs e)
         {
             // 使用说明，弹出新窗口
             instructions f = new instructions();
@@ -26,7 +26,7 @@ namespace WindowsFormsApp1
         }
 
 
-        private void button4_Click(object sender, EventArgs e)
+        private void Button4_Click(object sender, EventArgs e)
         {   //传递path地址
             string model_name = this.text_name.Text;
             string catalog = @comboBox1.SelectedItem.ToString();
@@ -39,7 +39,7 @@ namespace WindowsFormsApp1
 
         }
 
-        private void button7_Click(object sender, EventArgs e)
+        private void Button7_Click(object sender, EventArgs e)
         {
             //实现打开一个文件夹的功能
             FolderBrowserDialog FolderBrowserDialog = new FolderBrowserDialog();//声明并初始化FolderBrowserDialog类
@@ -53,13 +53,13 @@ namespace WindowsFormsApp1
             comboBox1.Text = path;
         }
 
-        private void button8_Click(object sender, EventArgs e)
+        private void Button8_Click(object sender, EventArgs e)
         {
             System.Environment.Exit(0);  //退出
         }
 
 
-        private void button2_Click(object sender, EventArgs e)
+        private void Button2_Click(object sender, EventArgs e)
         {
             string model_name = this.text_name.Text;
             // 参数确定
@@ -158,17 +158,12 @@ namespace WindowsFormsApp1
             {
                 File.AppendAllText(path, "#time_window:" + " " + time_window);
             }
-
-            if(model_name.Length > 1)
-                StatusLabel.Text = "创建模型成功！";
-            else
-            {
-                StatusLabel.Text = "创建了一个无名模型！";
-            }
+            // 条件表达式
+            StatusLabel.Text = model_name.Length > 1 ? "创建模型成功！" : "创建了一个无名模型！";
         }
 
 
-        private void button3_Click(object sender, EventArgs e)
+        private void Button3_Click(object sender, EventArgs e)
         {
             // 弹出新窗口
             Command_window_display f = new Command_window_display();
@@ -244,7 +239,7 @@ namespace WindowsFormsApp1
 
         }
 
-        private void comboBox1_SelectedIndexChanged_1(object sender, EventArgs e)
+        private void ComboBox1_SelectedIndexChanged_1(object sender, EventArgs e)
         {
             switch (comboBox1.SelectedItem.ToString()) //获取选择的内容
             {
@@ -254,19 +249,19 @@ namespace WindowsFormsApp1
             }
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void Button5_Click(object sender, EventArgs e)
         {
             //传递path地址
             string model_name = this.text_name.Text;
             string catalog = @comboBox1.SelectedItem.ToString();
             string path = System.IO.Path.Combine("{0}", "{1}", catalog, model_name + ".in");
 
-            model_in f = new model_in();
+            Model_in f = new Model_in();
             f.path = path;
             f.ShowDialog();
         }
 
-        private void button6_Click(object sender, EventArgs e)
+        private void Button6_Click(object sender, EventArgs e)
         {
             //传递path地址
             string model_name = this.text_name.Text;
@@ -279,7 +274,7 @@ namespace WindowsFormsApp1
             f.ShowDialog();
         }
 
-        private void button9_Click(object sender, EventArgs e)
+        private void Button9_Click(object sender, EventArgs e)
         {
             //传递path地址
             string model_name = this.text_name.Text;
@@ -288,7 +283,7 @@ namespace WindowsFormsApp1
             
 
             // 材料的弹出新窗口
-            imge_get f = new imge_get();
+            Imge_get f = new Imge_get();
             f.path = path;
             f.name = model_name;
             f.sourcepath = catalog;

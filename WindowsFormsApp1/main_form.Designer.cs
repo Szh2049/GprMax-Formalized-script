@@ -1,7 +1,7 @@
 ﻿
 namespace WindowsFormsApp1
 {
-    partial class main_form
+    partial class Main_form
     {
         /// <summary>
         /// 必需的设计器变量。
@@ -29,7 +29,7 @@ namespace WindowsFormsApp1
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(main_form));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main_form));
             this.button1 = new System.Windows.Forms.Button();
             this.domain_x = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -75,7 +75,7 @@ namespace WindowsFormsApp1
             this.button1.TabIndex = 0;
             this.button1.Text = "使用说明";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
             // domain_x
             // 
@@ -205,7 +205,7 @@ namespace WindowsFormsApp1
             this.button2.TabIndex = 16;
             this.button2.Text = "保存";
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button2.Click += new System.EventHandler(this.Button2_Click);
             // 
             // comboBox1
             // 
@@ -217,7 +217,7 @@ namespace WindowsFormsApp1
             this.comboBox1.Size = new System.Drawing.Size(242, 23);
             this.comboBox1.TabIndex = 17;
             this.comboBox1.Text = "D:\\Temp";
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged_1);
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.ComboBox1_SelectedIndexChanged_1);
             // 
             // button3
             // 
@@ -228,7 +228,7 @@ namespace WindowsFormsApp1
             this.button3.TabIndex = 18;
             this.button3.Text = "导入GprMax";
             this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.button3.Click += new System.EventHandler(this.Button3_Click);
             // 
             // label8
             // 
@@ -292,7 +292,7 @@ namespace WindowsFormsApp1
             this.button4.TabIndex = 25;
             this.button4.Text = "模型的材料";
             this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.button4.Click += new System.EventHandler(this.Button4_Click);
             // 
             // button5
             // 
@@ -302,7 +302,7 @@ namespace WindowsFormsApp1
             this.button5.TabIndex = 26;
             this.button5.Text = "模型内设置";
             this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.button5.Click += new System.EventHandler(this.Button5_Click);
             // 
             // button6
             // 
@@ -312,7 +312,7 @@ namespace WindowsFormsApp1
             this.button6.TabIndex = 27;
             this.button6.Text = "Python设置";
             this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.button6.Click += new System.EventHandler(this.Button6_Click);
             // 
             // label12
             // 
@@ -343,7 +343,7 @@ namespace WindowsFormsApp1
             this.button7.TabIndex = 30;
             this.button7.Text = "添加目录";
             this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
+            this.button7.Click += new System.EventHandler(this.Button7_Click);
             // 
             // button8
             // 
@@ -354,7 +354,7 @@ namespace WindowsFormsApp1
             this.button8.TabIndex = 32;
             this.button8.Text = "退出";
             this.button8.UseVisualStyleBackColor = true;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
+            this.button8.Click += new System.EventHandler(this.Button8_Click);
             // 
             // label14
             // 
@@ -375,7 +375,7 @@ namespace WindowsFormsApp1
             this.button9.TabIndex = 34;
             this.button9.Text = "生成图像";
             this.button9.UseVisualStyleBackColor = true;
-            this.button9.Click += new System.EventHandler(this.button9_Click);
+            this.button9.Click += new System.EventHandler(this.Button9_Click);
             // 
             // StatusLabel
             // 

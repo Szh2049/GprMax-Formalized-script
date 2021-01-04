@@ -126,4 +126,7 @@
 同一个.in文件一次只能选择一种扫描形式，A或B，或者删除已生成的out文件。
 如果在代码中加入了#geometry_view:来显示图像，则会在进行B扫描时形成n个快照文件。</value>
   </data>
+  <metadata name="timer1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>26, 17</value>
+  </metadata>
 </root>

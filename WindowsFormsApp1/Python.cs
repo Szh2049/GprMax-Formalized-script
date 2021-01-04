@@ -18,10 +18,10 @@ namespace WindowsFormsApp1
             InitializeComponent();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void Button2_Click(object sender, EventArgs e)
         {
             //清空Richtextbox
-            foreach (var item in this.Controls)
+            foreach (object item in this.Controls)
             {
                 if (item is RichTextBox)
                 {
@@ -31,7 +31,7 @@ namespace WindowsFormsApp1
             }
         }
         public string path = null;
-        private void button1_Click(object sender, EventArgs e)
+        private void Button1_Click(object sender, EventArgs e)
         {
             string content = "\n" + this.python_code.Text;
             if(File.Exists(path))
