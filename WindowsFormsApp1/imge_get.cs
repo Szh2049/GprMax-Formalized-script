@@ -425,8 +425,6 @@ namespace WindowsFormsApp1
             timer1.Enabled = false;
             //先关闭窗口
             this.Close();
-            //再退出程序
-            Application.Exit();
         }
         public static Process newProcess(String exe)
         {
