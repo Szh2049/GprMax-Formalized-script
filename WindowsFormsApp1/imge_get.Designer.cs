@@ -104,7 +104,6 @@ namespace WindowsFormsApp1
             // 
             // A_scans
             // 
-            this.A_scans.Enabled = false;
             this.A_scans.Font = new System.Drawing.Font("SimSun-ExtB", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.A_scans.Location = new System.Drawing.Point(806, 430);
             this.A_scans.Name = "A_scans";
